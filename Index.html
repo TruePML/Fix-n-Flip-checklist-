@@ -7,27 +7,11 @@
 <title>Fix & Flip Beginner's Master Checklist</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:        #2A2A26;
-    --bg2:       #1E1E1C;
-    --bg3:       #161614;
-    --text:      #F0F0EA;
-    --muted:     #C8C8C0;
-    --dim:       #8A9AB0;
-    --green:     #3DD68C;
-    --blue:      #4A9EF5;
-    --amber:     #E09020;
-    --teal:      #1AB8A0;
-    --purple:    #9B6EF5;
-    --red:       #D94040;
-    --border:    rgba(200,200,192,0.12);
-  }
-
-- { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-background: var(–bg3);
-color: var(–text);
+background: #161614;
+color: #F0F0EA;
 font-family: ‘Inter’, sans-serif;
 font-size: 15px;
 line-height: 1.6;
@@ -36,8 +20,8 @@ min-height: 100vh;
 
 /* ── HEADER ── */
 .header {
-background: var(–bg2);
-border-bottom: 1px solid var(–border);
+background: #1E1E1C;
+border-bottom: 1px solid rgba(200,200,192,0.12);
 padding: 40px 24px 32px;
 text-align: center;
 position: relative;
@@ -48,13 +32,13 @@ content: ‘’;
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 3px;
-background: linear-gradient(90deg, var(–green), var(–teal), var(–blue), var(–purple));
+background: linear-gradient(90deg, #3DD68C, #1AB8A0, #4A9EF5, #9B6EF5);
 }
 .header-tag {
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
 letter-spacing: 0.15em;
-color: var(–green);
+color: #3DD68C;
 text-transform: uppercase;
 margin-bottom: 12px;
 }
@@ -62,13 +46,13 @@ margin-bottom: 12px;
 font-family: ‘Syne’, sans-serif;
 font-size: clamp(24px, 5vw, 42px);
 font-weight: 800;
-color: var(–text);
+color: #F0F0EA;
 line-height: 1.1;
 margin-bottom: 10px;
 }
-.header h1 span { color: var(–green); }
+.header h1 span { color: #3DD68C; }
 .header-sub {
-color: var(–muted);
+color: #C8C8C0;
 font-size: 13px;
 font-weight: 300;
 letter-spacing: 0.03em;
@@ -76,8 +60,8 @@ letter-spacing: 0.03em;
 
 /* ── PROGRESS BAR ── */
 .progress-wrap {
-background: var(–bg2);
-border-bottom: 1px solid var(–border);
+background: #1E1E1C;
+border-bottom: 1px solid rgba(200,200,192,0.12);
 padding: 16px 24px;
 position: sticky;
 top: 0;
@@ -93,20 +77,20 @@ gap: 14px;
 .progress-label {
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–muted);
+color: #C8C8C0;
 white-space: nowrap;
 letter-spacing: 0.08em;
 }
 .progress-bar-bg {
 flex: 1;
 height: 6px;
-background: var(–border);
+background: rgba(200,200,192,0.12);
 border-radius: 99px;
 overflow: hidden;
 }
 .progress-bar-fill {
 height: 100%;
-background: linear-gradient(90deg, var(–green), var(–teal));
+background: linear-gradient(90deg, #3DD68C, #1AB8A0);
 border-radius: 99px;
 transition: width 0.4s ease;
 width: 0%;
@@ -114,7 +98,7 @@ width: 0%;
 .progress-pct {
 font-family: ‘DM Mono’, monospace;
 font-size: 12px;
-color: var(–green);
+color: #3DD68C;
 min-width: 36px;
 text-align: right;
 }
@@ -128,8 +112,8 @@ padding: 32px 16px 80px;
 
 /* ── PHASE CARD ── */
 .phase {
-background: var(–bg2);
-border: 1px solid var(–border);
+background: #1E1E1C;
+border: 1px solid rgba(200,200,192,0.12);
 border-radius: 12px;
 margin-bottom: 20px;
 overflow: hidden;
@@ -141,7 +125,7 @@ gap: 14px;
 padding: 20px 22px;
 cursor: pointer;
 user-select: none;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid rgba(200,200,192,0.12);
 position: relative;
 }
 .phase-header:hover { background: rgba(255,255,255,0.02); }
@@ -163,10 +147,10 @@ flex: 1;
 .phase-meta {
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–dim);
+color: #8A9AB0;
 }
 .phase-arrow {
-color: var(–dim);
+color: #8A9AB0;
 font-size: 14px;
 transition: transform 0.3s;
 flex-shrink: 0;
@@ -185,7 +169,7 @@ margin: 20px 22px 4px;
 padding: 12px 16px;
 border-radius: 8px;
 font-size: 13px;
-color: var(–muted);
+color: #C8C8C0;
 border-left: 3px solid;
 background: rgba(255,255,255,0.03);
 line-height: 1.55;
@@ -194,7 +178,7 @@ line-height: 1.55;
 /* ── SECTION (terms / checklist / nuances) ── */
 .section {
 padding: 20px 22px;
-border-top: 1px solid var(–border);
+border-top: 1px solid rgba(200,200,192,0.12);
 }
 .section:first-child { border-top: none; }
 .section-label {
@@ -202,7 +186,7 @@ font-family: ‘DM Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.15em;
 text-transform: uppercase;
-color: var(–dim);
+color: #8A9AB0;
 margin-bottom: 14px;
 }
 
@@ -220,16 +204,16 @@ align-items: start;
 font-family: ‘DM Mono’, monospace;
 font-size: 12px;
 font-weight: 500;
-color: var(–text);
+color: #F0F0EA;
 padding-top: 1px;
 line-height: 1.4;
 }
 .term-def {
 font-size: 13.5px;
-color: var(–muted);
+color: #C8C8C0;
 line-height: 1.55;
 }
-.term-def strong { color: var(–text); font-weight: 500; }
+.term-def strong { color: #F0F0EA; font-weight: 500; }
 
 /* ── CHECKLIST ITEMS ── */
 .check-item {
@@ -247,7 +231,7 @@ transition: background 0.15s;
 width: 18px;
 height: 18px;
 border-radius: 4px;
-border: 1.5px solid var(–dim);
+border: 1.5px solid #8A9AB0;
 flex-shrink: 0;
 margin-top: 2px;
 display: flex;
@@ -257,12 +241,12 @@ transition: all 0.2s;
 background: transparent;
 }
 .check-item.checked .check-box {
-background: var(–green);
-border-color: var(–green);
+background: #3DD68C;
+border-color: #3DD68C;
 }
 .check-box-tick {
 display: none;
-color: var(–bg3);
+color: #161614;
 font-size: 11px;
 font-weight: 700;
 line-height: 1;
@@ -270,30 +254,30 @@ line-height: 1;
 .check-item.checked .check-box-tick { display: block; }
 .check-text {
 font-size: 13.5px;
-color: var(–muted);
+color: #C8C8C0;
 line-height: 1.5;
 transition: color 0.2s;
 }
 .check-item.checked .check-text {
-color: var(–dim);
+color: #8A9AB0;
 text-decoration: line-through;
 text-decoration-color: rgba(61,214,140,0.4);
 }
 
 /* ── FORMULA BOX ── */
 .formula-box {
-background: var(–bg3);
-border: 1px solid var(–border);
+background: #161614;
+border: 1px solid rgba(200,200,192,0.12);
 border-radius: 8px;
 padding: 16px 18px;
 font-family: ‘DM Mono’, monospace;
 font-size: 12.5px;
 line-height: 2;
-color: var(–muted);
+color: #C8C8C0;
 margin: 8px 0;
 }
-.formula-box .f-highlight { color: var(–green); }
-.formula-box .f-eq { color: var(–amber); }
+.formula-box .f-highlight { color: #3DD68C; }
+.formula-box .f-eq { color: #E09020; }
 
 /* ── CALLOUT BOX ── */
 .callout {
@@ -302,11 +286,11 @@ border: 1px solid rgba(224,144,32,0.25);
 border-radius: 8px;
 padding: 14px 16px;
 font-size: 13px;
-color: var(–muted);
+color: #C8C8C0;
 line-height: 1.6;
 margin: 8px 0;
 }
-.callout strong { color: var(–amber); }
+.callout strong { color: #E09020; }
 
 /* ── REFERENCE TABLE ── */
 .ref-table-wrap {
@@ -326,10 +310,10 @@ font-family: ‘DM Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: var(–dim);
+color: #8A9AB0;
 text-align: left;
 padding: 8px 12px;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid rgba(200,200,192,0.12);
 }
 .ref-table td {
 padding: 10px 12px;
@@ -340,11 +324,11 @@ word-break: break-word;
 .ref-table td:first-child {
 font-family: ‘DM Mono’, monospace;
 font-size: 12px;
-color: var(–green);
+color: #3DD68C;
 white-space: normal;
 word-break: break-word;
 }
-.ref-table td:last-child { color: var(–muted); }
+.ref-table td:last-child { color: #C8C8C0; }
 .ref-table tr:last-child td { border-bottom: none; }
 
 /* ── RESOURCES LIST ── */
@@ -366,13 +350,13 @@ white-space: nowrap;
 flex-shrink: 0;
 margin-top: 1px;
 }
-.res-book  { background: rgba(74,158,245,0.15); color: var(–blue); }
-.res-pod   { background: rgba(155,110,245,0.15); color: var(–purple); }
+.res-book  { background: rgba(74,158,245,0.15); color: #4A9EF5; }
+.res-pod   { background: rgba(155,110,245,0.15); color: #9B6EF5; }
 .res-vid   { background: rgba(213,70,70,0.15); color: #E06060; }
-.res-comm  { background: rgba(26,184,160,0.15); color: var(–teal); }
-.res-tool  { background: rgba(224,144,32,0.15); color: var(–amber); }
-.res-name { font-size: 13.5px; color: var(–text); font-weight: 500; }
-.res-desc { font-size: 12.5px; color: var(–dim); margin-top: 2px; }
+.res-comm  { background: rgba(26,184,160,0.15); color: #1AB8A0; }
+.res-tool  { background: rgba(224,144,32,0.15); color: #E09020; }
+.res-name { font-size: 13.5px; color: #F0F0EA; font-weight: 500; }
+.res-desc { font-size: 12.5px; color: #8A9AB0; margin-top: 2px; }
 
 /* ── NUANCES ── */
 .nuance-item {
@@ -387,45 +371,45 @@ align-items: flex-start;
 width: 6px;
 height: 6px;
 border-radius: 50%;
-background: var(–amber);
+background: #E09020;
 margin-top: 7px;
 flex-shrink: 0;
 }
-.nuance-text { font-size: 13.5px; color: var(–muted); line-height: 1.55; }
-.nuance-text strong { color: var(–text); font-weight: 500; }
+.nuance-text { font-size: 13.5px; color: #C8C8C0; line-height: 1.55; }
+.nuance-text strong { color: #F0F0EA; font-weight: 500; }
 
 /* ── PHASE COLORS ── */
-.p1 .phase-num { background: rgba(61,214,140,0.12); color: var(–green); }
-.p1 .phase-title { color: var(–green); }
-.p1 .why-note { border-color: var(–green); }
+.p1 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+.p1 .phase-title { color: #3DD68C; }
+.p1 .why-note { border-color: #3DD68C; }
 
-.p2 .phase-num { background: rgba(74,158,245,0.12); color: var(–blue); }
-.p2 .phase-title { color: var(–blue); }
-.p2 .why-note { border-color: var(–blue); }
+.p2 .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
+.p2 .phase-title { color: #4A9EF5; }
+.p2 .why-note { border-color: #4A9EF5; }
 
-.p3 .phase-num { background: rgba(155,110,245,0.12); color: var(–purple); }
-.p3 .phase-title { color: var(–purple); }
-.p3 .why-note { border-color: var(–purple); }
+.p3 .phase-num { background: rgba(155,110,245,0.12); color: #9B6EF5; }
+.p3 .phase-title { color: #9B6EF5; }
+.p3 .why-note { border-color: #9B6EF5; }
 
-.p4 .phase-num { background: rgba(26,184,160,0.12); color: var(–teal); }
-.p4 .phase-title { color: var(–teal); }
-.p4 .why-note { border-color: var(–teal); }
+.p4 .phase-num { background: rgba(26,184,160,0.12); color: #1AB8A0; }
+.p4 .phase-title { color: #1AB8A0; }
+.p4 .why-note { border-color: #1AB8A0; }
 
-.p5 .phase-num { background: rgba(224,144,32,0.12); color: var(–amber); }
-.p5 .phase-title { color: var(–amber); }
-.p5 .why-note { border-color: var(–amber); }
+.p5 .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
+.p5 .phase-title { color: #E09020; }
+.p5 .why-note { border-color: #E09020; }
 
-.p6 .phase-num { background: rgba(61,214,140,0.12); color: var(–green); }
-.p6 .phase-title { color: var(–green); }
-.p6 .why-note { border-color: var(–green); }
+.p6 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+.p6 .phase-title { color: #3DD68C; }
+.p6 .why-note { border-color: #3DD68C; }
 
 /* ── SPECIAL SECTIONS ── */
-.nuances-phase .phase-num { background: rgba(224,144,32,0.12); color: var(–amber); }
-.nuances-phase .phase-title { color: var(–amber); }
-.formulas-phase .phase-num { background: rgba(61,214,140,0.12); color: var(–green); }
-.formulas-phase .phase-title { color: var(–green); }
-.resources-phase .phase-num { background: rgba(74,158,245,0.12); color: var(–blue); }
-.resources-phase .phase-title { color: var(–blue); }
+.nuances-phase .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
+.nuances-phase .phase-title { color: #E09020; }
+.formulas-phase .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+.formulas-phase .phase-title { color: #3DD68C; }
+.resources-phase .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
+.resources-phase .phase-title { color: #4A9EF5; }
 
 /* ── FOOTER ── */
 .footer {
@@ -433,8 +417,8 @@ text-align: center;
 padding: 24px;
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–dim);
-border-top: 1px solid var(–border);
+color: #8A9AB0;
+border-top: 1px solid rgba(200,200,192,0.12);
 letter-spacing: 0.06em;
 }
 
@@ -582,7 +566,7 @@ letter-spacing: 0.06em;
       − Holding Costs (interest + taxes + insurance × months)<br>
       − Disposition Costs (~8–10% of ARV)<br>
       − Financing Costs (points + rate × months)<br>
-      <span style="color:var(--border);">─────────────────────────────</span><br>
+      <span style="color:rgba(200,200,192,0.12);">─────────────────────────────</span><br>
       <span class="f-eq">= Net Profit</span><br><br>
       Net Profit ÷ Total Cash Out of Pocket <span class="f-eq">= ROI</span>
     </div>
