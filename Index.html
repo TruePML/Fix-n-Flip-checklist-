@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,429 +8,428 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-background: #161614;
-color: #F0F0EA;
-font-family: ‘Inter’, sans-serif;
-font-size: 15px;
-line-height: 1.6;
-min-height: 100vh;
-}
+  body {
+    background: #161614;
+    color: #F0F0EA;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
 
-/* ── HEADER ── */
-.header {
-background: #1E1E1C;
-border-bottom: 1px solid rgba(200,200,192,0.12);
-padding: 40px 24px 32px;
-text-align: center;
-position: relative;
-overflow: hidden;
-}
-.header::before {
-content: ‘’;
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 3px;
-background: linear-gradient(90deg, #3DD68C, #1AB8A0, #4A9EF5, #9B6EF5);
-}
-.header-tag {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-letter-spacing: 0.15em;
-color: #3DD68C;
-text-transform: uppercase;
-margin-bottom: 12px;
-}
-.header h1 {
-font-family: ‘Syne’, sans-serif;
-font-size: clamp(24px, 5vw, 42px);
-font-weight: 800;
-color: #F0F0EA;
-line-height: 1.1;
-margin-bottom: 10px;
-}
-.header h1 span { color: #3DD68C; }
-.header-sub {
-color: #C8C8C0;
-font-size: 13px;
-font-weight: 300;
-letter-spacing: 0.03em;
-}
+  /* ── HEADER ── */
+  .header {
+    background: #1E1E1C;
+    border-bottom: 1px solid rgba(200,200,192,0.12);
+    padding: 40px 24px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3DD68C, #1AB8A0, #4A9EF5, #9B6EF5);
+  }
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #3DD68C;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 800;
+    color: #F0F0EA;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .header h1 span { color: #3DD68C; }
+  .header-sub {
+    color: #C8C8C0;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
 
-/* ── PROGRESS BAR ── */
-.progress-wrap {
-background: #1E1E1C;
-border-bottom: 1px solid rgba(200,200,192,0.12);
-padding: 16px 24px;
-position: sticky;
-top: 0;
-z-index: 100;
-}
-.progress-row {
-max-width: 860px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-gap: 14px;
-}
-.progress-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-color: #C8C8C0;
-white-space: nowrap;
-letter-spacing: 0.08em;
-}
-.progress-bar-bg {
-flex: 1;
-height: 6px;
-background: rgba(200,200,192,0.12);
-border-radius: 99px;
-overflow: hidden;
-}
-.progress-bar-fill {
-height: 100%;
-background: linear-gradient(90deg, #3DD68C, #1AB8A0);
-border-radius: 99px;
-transition: width 0.4s ease;
-width: 0%;
-}
-.progress-pct {
-font-family: ‘DM Mono’, monospace;
-font-size: 12px;
-color: #3DD68C;
-min-width: 36px;
-text-align: right;
-}
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    background: #1E1E1C;
+    border-bottom: 1px solid rgba(200,200,192,0.12);
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .progress-row {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #C8C8C0;
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+  }
+  .progress-bar-bg {
+    flex: 1;
+    height: 6px;
+    background: rgba(200,200,192,0.12);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3DD68C, #1AB8A0);
+    border-radius: 99px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+  .progress-pct {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: #3DD68C;
+    min-width: 36px;
+    text-align: right;
+  }
 
-/* ── MAIN LAYOUT ── */
-.main {
-max-width: 860px;
-margin: 0 auto;
-padding: 32px 16px 80px;
-}
+  /* ── MAIN LAYOUT ── */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
 
-/* ── PHASE CARD ── */
-.phase {
-background: #1E1E1C;
-border: 1px solid rgba(200,200,192,0.12);
-border-radius: 12px;
-margin-bottom: 20px;
-overflow: hidden;
-}
-.phase-header {
-display: flex;
-align-items: center;
-gap: 14px;
-padding: 20px 22px;
-cursor: pointer;
-user-select: none;
-border-bottom: 1px solid rgba(200,200,192,0.12);
-position: relative;
-}
-.phase-header:hover { background: rgba(255,255,255,0.02); }
-.phase-num {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-font-weight: 500;
-padding: 4px 9px;
-border-radius: 6px;
-letter-spacing: 0.08em;
-flex-shrink: 0;
-}
-.phase-title {
-font-family: ‘Syne’, sans-serif;
-font-size: 16px;
-font-weight: 700;
-flex: 1;
-}
-.phase-meta {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-color: #8A9AB0;
-}
-.phase-arrow {
-color: #8A9AB0;
-font-size: 14px;
-transition: transform 0.3s;
-flex-shrink: 0;
-}
-.phase.open .phase-arrow { transform: rotate(180deg); }
+  /* ── PHASE CARD ── */
+  .phase {
+    background: #1E1E1C;
+    border: 1px solid rgba(200,200,192,0.12);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 22px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid rgba(200,200,192,0.12);
+    position: relative;
+  }
+  .phase-header:hover { background: rgba(255,255,255,0.02); }
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+  .phase-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    flex: 1;
+  }
+  .phase-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #8A9AB0;
+  }
+  .phase-arrow {
+    color: #8A9AB0;
+    font-size: 14px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+  .phase.open .phase-arrow { transform: rotate(180deg); }
 
-.phase-body {
-display: none;
-padding: 0;
-}
-.phase.open .phase-body { display: block; }
+  .phase-body {
+    display: none;
+    padding: 0;
+  }
+  .phase.open .phase-body { display: block; }
 
-/* ── WHY NOTE ── */
-.why-note {
-margin: 20px 22px 4px;
-padding: 12px 16px;
-border-radius: 8px;
-font-size: 13px;
-color: #C8C8C0;
-border-left: 3px solid;
-background: rgba(255,255,255,0.03);
-line-height: 1.55;
-}
+  /* ── WHY NOTE ── */
+  .why-note {
+    margin: 20px 22px 4px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #C8C8C0;
+    border-left: 3px solid;
+    background: rgba(255,255,255,0.03);
+    line-height: 1.55;
+  }
 
-/* ── SECTION (terms / checklist / nuances) ── */
-.section {
-padding: 20px 22px;
-border-top: 1px solid rgba(200,200,192,0.12);
-}
-.section:first-child { border-top: none; }
-.section-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-letter-spacing: 0.15em;
-text-transform: uppercase;
-color: #8A9AB0;
-margin-bottom: 14px;
-}
+  /* ── SECTION (terms / checklist / nuances) ── */
+  .section {
+    padding: 20px 22px;
+    border-top: 1px solid rgba(200,200,192,0.12);
+  }
+  .section:first-child { border-top: none; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8A9AB0;
+    margin-bottom: 14px;
+  }
 
-/* ── TERMS ── */
-.term {
-padding: 11px 0;
-border-bottom: 1px solid rgba(255,255,255,0.05);
-display: grid;
-grid-template-columns: 180px 1fr;
-gap: 12px;
-align-items: start;
-}
-.term:last-child { border-bottom: none; }
-.term-word {
-font-family: ‘DM Mono’, monospace;
-font-size: 12px;
-font-weight: 500;
-color: #F0F0EA;
-padding-top: 1px;
-line-height: 1.4;
-}
-.term-def {
-font-size: 13.5px;
-color: #C8C8C0;
-line-height: 1.55;
-}
-.term-def strong { color: #F0F0EA; font-weight: 500; }
+  /* ── TERMS ── */
+  .term {
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .term:last-child { border-bottom: none; }
+  .term-word {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: #F0F0EA;
+    padding-top: 1px;
+    line-height: 1.4;
+  }
+  .term-def {
+    font-size: 13.5px;
+    color: #C8C8C0;
+    line-height: 1.55;
+  }
+  .term-def strong { color: #F0F0EA; font-weight: 500; }
 
-/* ── CHECKLIST ITEMS ── */
-.check-item {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-padding: 9px 0;
-cursor: pointer;
-border-radius: 6px;
-transition: background 0.15s;
-}
-.check-item:hover { background: rgba(255,255,255,0.025); margin: 0 -8px; padding: 9px 8px; }
-.check-item input[type=“checkbox”] { display: none; }
-.check-box {
-width: 18px;
-height: 18px;
-border-radius: 4px;
-border: 1.5px solid #8A9AB0;
-flex-shrink: 0;
-margin-top: 2px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: all 0.2s;
-background: transparent;
-}
-.check-item.checked .check-box {
-background: #3DD68C;
-border-color: #3DD68C;
-}
-.check-box-tick {
-display: none;
-color: #161614;
-font-size: 11px;
-font-weight: 700;
-line-height: 1;
-}
-.check-item.checked .check-box-tick { display: block; }
-.check-text {
-font-size: 13.5px;
-color: #C8C8C0;
-line-height: 1.5;
-transition: color 0.2s;
-}
-.check-item.checked .check-text {
-color: #8A9AB0;
-text-decoration: line-through;
-text-decoration-color: rgba(61,214,140,0.4);
-}
+  /* ── CHECKLIST ITEMS ── */
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .check-item:hover { background: rgba(255,255,255,0.025); margin: 0 -8px; padding: 9px 8px; }
+  .check-item input[type="checkbox"] { display: none; }
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1.5px solid #8A9AB0;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: transparent;
+  }
+  .check-item.checked .check-box {
+    background: #3DD68C;
+    border-color: #3DD68C;
+  }
+  .check-box-tick {
+    display: none;
+    color: #161614;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .check-item.checked .check-box-tick { display: block; }
+  .check-text {
+    font-size: 13.5px;
+    color: #C8C8C0;
+    line-height: 1.5;
+    transition: color 0.2s;
+  }
+  .check-item.checked .check-text {
+    color: #8A9AB0;
+    text-decoration: line-through;
+    text-decoration-color: rgba(61,214,140,0.4);
+  }
 
-/* ── FORMULA BOX ── */
-.formula-box {
-background: #161614;
-border: 1px solid rgba(200,200,192,0.12);
-border-radius: 8px;
-padding: 16px 18px;
-font-family: ‘DM Mono’, monospace;
-font-size: 12.5px;
-line-height: 2;
-color: #C8C8C0;
-margin: 8px 0;
-}
-.formula-box .f-highlight { color: #3DD68C; }
-.formula-box .f-eq { color: #E09020; }
+  /* ── FORMULA BOX ── */
+  .formula-box {
+    background: #161614;
+    border: 1px solid rgba(200,200,192,0.12);
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12.5px;
+    line-height: 2;
+    color: #C8C8C0;
+    margin: 8px 0;
+  }
+  .formula-box .f-highlight { color: #3DD68C; }
+  .formula-box .f-eq { color: #E09020; }
 
-/* ── CALLOUT BOX ── */
-.callout {
-background: rgba(224,144,32,0.08);
-border: 1px solid rgba(224,144,32,0.25);
-border-radius: 8px;
-padding: 14px 16px;
-font-size: 13px;
-color: #C8C8C0;
-line-height: 1.6;
-margin: 8px 0;
-}
-.callout strong { color: #E09020; }
+  /* ── CALLOUT BOX ── */
+  .callout {
+    background: rgba(224,144,32,0.08);
+    border: 1px solid rgba(224,144,32,0.25);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #C8C8C0;
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+  .callout strong { color: #E09020; }
 
-/* ── REFERENCE TABLE ── */
-.ref-table-wrap {
-overflow-x: auto;
--webkit-overflow-scrolling: touch;
-width: 100%;
-}
-.ref-table {
-width: 100%;
-min-width: 480px;
-border-collapse: collapse;
-font-size: 13px;
-margin-top: 4px;
-}
-.ref-table th {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: #8A9AB0;
-text-align: left;
-padding: 8px 12px;
-border-bottom: 1px solid rgba(200,200,192,0.12);
-}
-.ref-table td {
-padding: 10px 12px;
-border-bottom: 1px solid rgba(255,255,255,0.04);
-vertical-align: top;
-word-break: break-word;
-}
-.ref-table td:first-child {
-font-family: ‘DM Mono’, monospace;
-font-size: 12px;
-color: #3DD68C;
-white-space: normal;
-word-break: break-word;
-}
-.ref-table td:last-child { color: #C8C8C0; }
-.ref-table tr:last-child td { border-bottom: none; }
+  /* ── REFERENCE TABLE ── */
+  .ref-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  .ref-table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .ref-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8A9AB0;
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(200,200,192,0.12);
+  }
+  .ref-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+    word-break: break-word;
+  }
+  .ref-table td:first-child {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: #3DD68C;
+    white-space: normal;
+    word-break: break-word;
+  }
+  .ref-table td:last-child { color: #C8C8C0; }
+  .ref-table tr:last-child td { border-bottom: none; }
 
-/* ── RESOURCES LIST ── */
-.resource-item {
-display: flex;
-gap: 12px;
-padding: 10px 0;
-border-bottom: 1px solid rgba(255,255,255,0.05);
-align-items: flex-start;
-}
-.resource-item:last-child { border-bottom: none; }
-.res-tag {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-padding: 3px 8px;
-border-radius: 4px;
-letter-spacing: 0.08em;
-white-space: nowrap;
-flex-shrink: 0;
-margin-top: 1px;
-}
-.res-book  { background: rgba(74,158,245,0.15); color: #4A9EF5; }
-.res-pod   { background: rgba(155,110,245,0.15); color: #9B6EF5; }
-.res-vid   { background: rgba(213,70,70,0.15); color: #E06060; }
-.res-comm  { background: rgba(26,184,160,0.15); color: #1AB8A0; }
-.res-tool  { background: rgba(224,144,32,0.15); color: #E09020; }
-.res-name { font-size: 13.5px; color: #F0F0EA; font-weight: 500; }
-.res-desc { font-size: 12.5px; color: #8A9AB0; margin-top: 2px; }
+  /* ── RESOURCES LIST ── */
+  .resource-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: flex-start;
+  }
+  .resource-item:last-child { border-bottom: none; }
+  .res-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .res-book  { background: rgba(74,158,245,0.15); color: #4A9EF5; }
+  .res-pod   { background: rgba(155,110,245,0.15); color: #9B6EF5; }
+  .res-vid   { background: rgba(213,70,70,0.15); color: #E06060; }
+  .res-comm  { background: rgba(26,184,160,0.15); color: #1AB8A0; }
+  .res-tool  { background: rgba(224,144,32,0.15); color: #E09020; }
+  .res-name { font-size: 13.5px; color: #F0F0EA; font-weight: 500; }
+  .res-desc { font-size: 12.5px; color: #8A9AB0; margin-top: 2px; }
 
-/* ── NUANCES ── */
-.nuance-item {
-display: flex;
-gap: 12px;
-padding: 11px 0;
-border-bottom: 1px solid rgba(255,255,255,0.05);
-align-items: flex-start;
-}
-.nuance-item:last-child { border-bottom: none; }
-.nuance-dot {
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: #E09020;
-margin-top: 7px;
-flex-shrink: 0;
-}
-.nuance-text { font-size: 13.5px; color: #C8C8C0; line-height: 1.55; }
-.nuance-text strong { color: #F0F0EA; font-weight: 500; }
+  /* ── NUANCES ── */
+  .nuance-item {
+    display: flex;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: flex-start;
+  }
+  .nuance-item:last-child { border-bottom: none; }
+  .nuance-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #E09020;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .nuance-text { font-size: 13.5px; color: #C8C8C0; line-height: 1.55; }
+  .nuance-text strong { color: #F0F0EA; font-weight: 500; }
 
-/* ── PHASE COLORS ── */
-.p1 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
-.p1 .phase-title { color: #3DD68C; }
-.p1 .why-note { border-color: #3DD68C; }
+  /* ── PHASE COLORS ── */
+  .p1 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+  .p1 .phase-title { color: #3DD68C; }
+  .p1 .why-note { border-color: #3DD68C; }
 
-.p2 .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
-.p2 .phase-title { color: #4A9EF5; }
-.p2 .why-note { border-color: #4A9EF5; }
+  .p2 .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
+  .p2 .phase-title { color: #4A9EF5; }
+  .p2 .why-note { border-color: #4A9EF5; }
 
-.p3 .phase-num { background: rgba(155,110,245,0.12); color: #9B6EF5; }
-.p3 .phase-title { color: #9B6EF5; }
-.p3 .why-note { border-color: #9B6EF5; }
+  .p3 .phase-num { background: rgba(155,110,245,0.12); color: #9B6EF5; }
+  .p3 .phase-title { color: #9B6EF5; }
+  .p3 .why-note { border-color: #9B6EF5; }
 
-.p4 .phase-num { background: rgba(26,184,160,0.12); color: #1AB8A0; }
-.p4 .phase-title { color: #1AB8A0; }
-.p4 .why-note { border-color: #1AB8A0; }
+  .p4 .phase-num { background: rgba(26,184,160,0.12); color: #1AB8A0; }
+  .p4 .phase-title { color: #1AB8A0; }
+  .p4 .why-note { border-color: #1AB8A0; }
 
-.p5 .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
-.p5 .phase-title { color: #E09020; }
-.p5 .why-note { border-color: #E09020; }
+  .p5 .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
+  .p5 .phase-title { color: #E09020; }
+  .p5 .why-note { border-color: #E09020; }
 
-.p6 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
-.p6 .phase-title { color: #3DD68C; }
-.p6 .why-note { border-color: #3DD68C; }
+  .p6 .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+  .p6 .phase-title { color: #3DD68C; }
+  .p6 .why-note { border-color: #3DD68C; }
 
-/* ── SPECIAL SECTIONS ── */
-.nuances-phase .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
-.nuances-phase .phase-title { color: #E09020; }
-.formulas-phase .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
-.formulas-phase .phase-title { color: #3DD68C; }
-.resources-phase .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
-.resources-phase .phase-title { color: #4A9EF5; }
+  /* ── SPECIAL SECTIONS ── */
+  .nuances-phase .phase-num { background: rgba(224,144,32,0.12); color: #E09020; }
+  .nuances-phase .phase-title { color: #E09020; }
+  .formulas-phase .phase-num { background: rgba(61,214,140,0.12); color: #3DD68C; }
+  .formulas-phase .phase-title { color: #3DD68C; }
+  .resources-phase .phase-num { background: rgba(74,158,245,0.12); color: #4A9EF5; }
+  .resources-phase .phase-title { color: #4A9EF5; }
 
-/* ── FOOTER ── */
-.footer {
-text-align: center;
-padding: 24px;
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-color: #8A9AB0;
-border-top: 1px solid rgba(200,200,192,0.12);
-letter-spacing: 0.06em;
-}
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #8A9AB0;
+    border-top: 1px solid rgba(200,200,192,0.12);
+    letter-spacing: 0.06em;
+  }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-.term { grid-template-columns: 1fr; gap: 4px; }
-.term-word { font-size: 11px; }
-.phase-header { padding: 16px; }
-.section { padding: 16px; }
-.header { padding: 28px 16px 24px; }
-}
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .term { grid-template-columns: 1fr; gap: 4px; }
+    .term-word { font-size: 11px; }
+    .phase-header { padding: 16px; }
+    .section { padding: 16px; }
+    .header { padding: 28px 16px 24px; }
+  }
 </style>
-
 </head>
 <body>
 
@@ -452,7 +450,6 @@ letter-spacing: 0.06em;
 <div class="main">
 
   <!-- ═══════════════════════════════════════ PHASE 1 -->
-
   <div class="phase p1 open" id="phase1">
     <div class="phase-header" onclick="togglePhase('phase1')">
       <div class="phase-num">PHASE 01</div>
@@ -463,34 +460,30 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Before you look at a single deal. Get your infrastructure in place - mindset, entity, and market focus - or everything that follows is built on sand.</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">Investor Mindset</div><div class="term-def">You are buying <strong>math</strong>, not a house. Emotions lose money. If you love the property, you're already in trouble.</div></div>
-    <div class="term"><div class="term-word">Deal Flow</div><div class="term-def">Your consistent pipeline of potential properties. No deal flow = no business. This is built deliberately, not stumbled into.</div></div>
-    <div class="term"><div class="term-word">Entity Structure</div><div class="term-def">Most investors buy inside an LLC, not personally. Provides liability protection and tax benefits. Talk to a CPA and attorney before Deal 1.</div></div>
-    <div class="term"><div class="term-word">W-2 Investor</div><div class="term-def">Industry term for someone flipping while still employed. Lenders and the IRS both treat you differently. Know this upfront.</div></div>
-    <div class="term"><div class="term-word">Target Market</div><div class="term-def">Your specific city, zip codes, and price range. Trying to flip everywhere = flipping nowhere. Narrow focus wins.</div></div>
-    <div class="term"><div class="term-word">REIA</div><div class="term-def">Real Estate Investors Association. Local meetup groups, usually free. Where you meet wholesalers, lenders, and contractors. Non-negotiable - join one immediately.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">Investor Mindset</div><div class="term-def">You are buying <strong>math</strong>, not a house. Emotions lose money. If you love the property, you're already in trouble.</div></div>
+        <div class="term"><div class="term-word">Deal Flow</div><div class="term-def">Your consistent pipeline of potential properties. No deal flow = no business. This is built deliberately, not stumbled into.</div></div>
+        <div class="term"><div class="term-word">Entity Structure</div><div class="term-def">Most investors buy inside an LLC, not personally. Provides liability protection and tax benefits. Talk to a CPA and attorney before Deal 1.</div></div>
+        <div class="term"><div class="term-word">W-2 Investor</div><div class="term-def">Industry term for someone flipping while still employed. Lenders and the IRS both treat you differently. Know this upfront.</div></div>
+        <div class="term"><div class="term-word">Target Market</div><div class="term-def">Your specific city, zip codes, and price range. Trying to flip everywhere = flipping nowhere. Narrow focus wins.</div></div>
+        <div class="term"><div class="term-word">REIA</div><div class="term-def">Real Estate Investors Association. Local meetup groups, usually free. Where you meet wholesalers, lenders, and contractors. Non-negotiable - join one immediately.</div></div>
+      </div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Read <em>Flip</em> by Rick Villani - best operational flip book for beginners</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Join your local REIA - find at nationalreia.org</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Set up an LLC in your state before Deal 1</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Open a separate business checking account</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build a spreadsheet to track every deal you analyze - even ones you pass on</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Define your target market: city, zip codes, and price range ($150K–$300K is ideal for a first flip)</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Talk to a CPA before anything else - flips are taxed as <strong>ordinary income</strong>, not capital gains</div></label>
-  </div>
-</div>
-```
-
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Read <em>Flip</em> by Rick Villani - best operational flip book for beginners</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Join your local REIA - find at nationalreia.org</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Set up an LLC in your state before Deal 1</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Open a separate business checking account</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build a spreadsheet to track every deal you analyze - even ones you pass on</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Define your target market: city, zip codes, and price range ($150K–$300K is ideal for a first flip)</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Talk to a CPA before anything else - flips are taxed as <strong>ordinary income</strong>, not capital gains</div></label>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ PHASE 2 -->
-
   <div class="phase p2" id="phase2">
     <div class="phase-header" onclick="togglePhase('phase2')">
       <div class="phase-num">PHASE 02</div>
@@ -501,37 +494,33 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Know your buying power before you ever look at a deal. A wholesaler sends you a deal on Tuesday. If you don't have a Proof of Funds letter and can't move fast, it's gone by Wednesday - and you burned the relationship.</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">Hard Money Lender</div><div class="term-def">Lends based on the deal and property value, not your W-2 or credit score. Fast (7–14 days to close). Short term (6–18 months). Expensive: 10–14% interest, 2–4 points. Primary financing tool for flippers without their own cash.</div></div>
-    <div class="term"><div class="term-word">Points</div><div class="term-def">Upfront loan fees charged at closing. 1 point = 1% of loan amount. 2 points on a $150K loan = $3,000 out of pocket at closing. Model this in every deal.</div></div>
-    <div class="term"><div class="term-word">LTV</div><div class="term-def">Loan-to-Value. Loan amount as a % of the property's current as-is value. Most HMLs lend 65–75% LTV on purchase.</div></div>
-    <div class="term"><div class="term-word">ARV-Based Lending</div><div class="term-def">Some HMLs lend up to 65–70% of After Repair Value (not current value). Can cover both purchase and rehab. Most beginner-friendly lenders operate this way.</div></div>
-    <div class="term"><div class="term-word">Draw Schedule</div><div class="term-def">How rehab money gets released. HMLs don't hand you all the rehab cash upfront. They release it in stages after inspecting completed work milestones. You may need some cash to start before the first draw hits.</div></div>
-    <div class="term"><div class="term-word">Proof of Funds (POF)</div><div class="term-def">Letter from your HML confirming you're pre-approved and can close. Required to make credible offers. Get this <strong>before</strong> making a single offer.</div></div>
-    <div class="term"><div class="term-word">Private Money Lender</div><div class="term-def">An individual (friend, colleague, family) who lends at an agreed rate. Cheaper and more flexible than hard money. Start building these relationships at your REIA now - they become your biggest edge by Deal 2 or 3.</div></div>
-    <div class="term"><div class="term-word">Extension Fee</div><div class="term-def">If your project runs over schedule, HMLs charge a fee to extend the loan. Budget for this possibility in every deal.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">Hard Money Lender</div><div class="term-def">Lends based on the deal and property value, not your W-2 or credit score. Fast (7–14 days to close). Short term (6–18 months). Expensive: 10–14% interest, 2–4 points. Primary financing tool for flippers without their own cash.</div></div>
+        <div class="term"><div class="term-word">Points</div><div class="term-def">Upfront loan fees charged at closing. 1 point = 1% of loan amount. 2 points on a $150K loan = $3,000 out of pocket at closing. Model this in every deal.</div></div>
+        <div class="term"><div class="term-word">LTV</div><div class="term-def">Loan-to-Value. Loan amount as a % of the property's current as-is value. Most HMLs lend 65–75% LTV on purchase.</div></div>
+        <div class="term"><div class="term-word">ARV-Based Lending</div><div class="term-def">Some HMLs lend up to 65–70% of After Repair Value (not current value). Can cover both purchase and rehab. Most beginner-friendly lenders operate this way.</div></div>
+        <div class="term"><div class="term-word">Draw Schedule</div><div class="term-def">How rehab money gets released. HMLs don't hand you all the rehab cash upfront. They release it in stages after inspecting completed work milestones. You may need some cash to start before the first draw hits.</div></div>
+        <div class="term"><div class="term-word">Proof of Funds (POF)</div><div class="term-def">Letter from your HML confirming you're pre-approved and can close. Required to make credible offers. Get this <strong>before</strong> making a single offer.</div></div>
+        <div class="term"><div class="term-word">Private Money Lender</div><div class="term-def">An individual (friend, colleague, family) who lends at an agreed rate. Cheaper and more flexible than hard money. Start building these relationships at your REIA now - they become your biggest edge by Deal 2 or 3.</div></div>
+        <div class="term"><div class="term-word">Extension Fee</div><div class="term-def">If your project runs over schedule, HMLs charge a fee to extend the loan. Budget for this possibility in every deal.</div></div>
+      </div>
 
-  <div class="callout"><strong>Reality Check:</strong> 12% interest + 3 points on a $150K loan held 6 months ≈ $13,500 in financing costs out of your profit. The faster you renovate and sell, the less you bleed. A slow rehab is a profit killer.</div>
+      <div class="callout"><strong>Reality Check:</strong> 12% interest + 3 points on a $150K loan held 6 months ≈ $13,500 in financing costs out of your profit. The faster you renovate and sell, the less you bleed. A slow rehab is a profit killer.</div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Interview at least 3 hard money lenders before you need one - rates, points, draw process, and speed vary significantly</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Ask each HML: "What do you need from me to get pre-approved?" - get that list and complete it</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get your Proof of Funds letter before making a single offer</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Understand the draw schedule process for each lender you interview</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Calculate financing costs in every deal you underwrite - interest + points + potential extension fee</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Start networking for private money at your REIA - tell your story consistently. It pays off by Deal 2–3.</div></label>
-  </div>
-</div>
-```
-
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Interview at least 3 hard money lenders before you need one - rates, points, draw process, and speed vary significantly</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Ask each HML: "What do you need from me to get pre-approved?" - get that list and complete it</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get your Proof of Funds letter before making a single offer</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Understand the draw schedule process for each lender you interview</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Calculate financing costs in every deal you underwrite - interest + points + potential extension fee</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Start networking for private money at your REIA - tell your story consistently. It pays off by Deal 2–3.</div></label>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ PHASE 3 -->
-
   <div class="phase p3" id="phase3">
     <div class="phase-header" onclick="togglePhase('phase3')">
       <div class="phase-num">PHASE 03</div>
@@ -542,52 +531,48 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Learn the math cold before deals start coming in. A good wholesaler deal has a 24–48 hour window. If you're figuring out how to comp while the clock ticks, you'll overpay or miss it. Practice on 20–50 fake deals first.</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">ARV</div><div class="term-def">After Repair Value. What the property will be worth after all renovations are complete and it's in retail condition. Your single most important number - and the hardest to get right as a beginner.</div></div>
-    <div class="term"><div class="term-word">Comp</div><div class="term-def">A recently sold, similar property used to determine ARV. Must match: same neighborhood, similar sqft (within 15–20%), similar beds/baths, sold within 6 months, similar post-renovation condition.</div></div>
-    <div class="term"><div class="term-word">CMA</div><div class="term-def">Comparative Market Analysis. A formal comp report pulled from the MLS by an agent. More reliable than Zillow. Have your investor-friendly agent run one on every deal you get serious about.</div></div>
-    <div class="term"><div class="term-word">70% Rule</div><div class="term-def">Never pay more than 70% of ARV minus repair costs. <strong>(ARV × 0.70) − Repairs = MAO.</strong> Conservative by design - your starting filter, not a profit guarantee.</div></div>
-    <div class="term"><div class="term-word">MAO</div><div class="term-def">Maximum Allowable Offer. The highest price you can pay and still make the deal work. Know this number before you ever make an offer. Non-negotiable.</div></div>
-    <div class="term"><div class="term-word">Holding Costs</div><div class="term-def">Expenses that accumulate while you own the property: loan interest, property taxes, insurance, utilities, HOA. Every month you hold = money leaving your pocket.</div></div>
-    <div class="term"><div class="term-word">Acquisition Costs</div><div class="term-def">Costs to buy: closing costs, title insurance, transfer taxes. Budget 1–3% of purchase price.</div></div>
-    <div class="term"><div class="term-word">Disposition Costs</div><div class="term-def">Costs to sell: agent commissions (5–6%), closing costs, seller concessions. Budget 8–10% of ARV.</div></div>
-    <div class="term"><div class="term-word">Contingency Budget</div><div class="term-def">Extra money for unknown problems. Add 10–15% on top of every repair estimate. Always. No exceptions.</div></div>
-    <div class="term"><div class="term-word">DOM</div><div class="term-def">Days on Market. How long a comp took to sell. If comps are sitting 90+ days, your ARV may be optimistic. Fast DOM = healthy market.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">ARV</div><div class="term-def">After Repair Value. What the property will be worth after all renovations are complete and it's in retail condition. Your single most important number - and the hardest to get right as a beginner.</div></div>
+        <div class="term"><div class="term-word">Comp</div><div class="term-def">A recently sold, similar property used to determine ARV. Must match: same neighborhood, similar sqft (within 15–20%), similar beds/baths, sold within 6 months, similar post-renovation condition.</div></div>
+        <div class="term"><div class="term-word">CMA</div><div class="term-def">Comparative Market Analysis. A formal comp report pulled from the MLS by an agent. More reliable than Zillow. Have your investor-friendly agent run one on every deal you get serious about.</div></div>
+        <div class="term"><div class="term-word">70% Rule</div><div class="term-def">Never pay more than 70% of ARV minus repair costs. <strong>(ARV × 0.70) − Repairs = MAO.</strong> Conservative by design - your starting filter, not a profit guarantee.</div></div>
+        <div class="term"><div class="term-word">MAO</div><div class="term-def">Maximum Allowable Offer. The highest price you can pay and still make the deal work. Know this number before you ever make an offer. Non-negotiable.</div></div>
+        <div class="term"><div class="term-word">Holding Costs</div><div class="term-def">Expenses that accumulate while you own the property: loan interest, property taxes, insurance, utilities, HOA. Every month you hold = money leaving your pocket.</div></div>
+        <div class="term"><div class="term-word">Acquisition Costs</div><div class="term-def">Costs to buy: closing costs, title insurance, transfer taxes. Budget 1–3% of purchase price.</div></div>
+        <div class="term"><div class="term-word">Disposition Costs</div><div class="term-def">Costs to sell: agent commissions (5–6%), closing costs, seller concessions. Budget 8–10% of ARV.</div></div>
+        <div class="term"><div class="term-word">Contingency Budget</div><div class="term-def">Extra money for unknown problems. Add 10–15% on top of every repair estimate. Always. No exceptions.</div></div>
+        <div class="term"><div class="term-word">DOM</div><div class="term-def">Days on Market. How long a comp took to sell. If comps are sitting 90+ days, your ARV may be optimistic. Fast DOM = healthy market.</div></div>
+      </div>
 
-  <div class="section">
-    <div class="section-label">The Underwriting Formula</div>
-    <div class="formula-box">
-      <span class="f-highlight">ARV</span><br>
-      − Repairs + Contingency (10–15%)<br>
-      − Acquisition Costs (~2%)<br>
-      − Holding Costs (interest + taxes + insurance × months)<br>
-      − Disposition Costs (~8–10% of ARV)<br>
-      − Financing Costs (points + rate × months)<br>
-      <span style="color:rgba(200,200,192,0.12);">─────────────────────────────</span><br>
-      <span class="f-eq">= Net Profit</span><br><br>
-      Net Profit ÷ Total Cash Out of Pocket <span class="f-eq">= ROI</span>
+      <div class="section">
+        <div class="section-label">The Underwriting Formula</div>
+        <div class="formula-box">
+          <span class="f-highlight">ARV</span><br>
+          − Repairs + Contingency (10–15%)<br>
+          − Acquisition Costs (~2%)<br>
+          − Holding Costs (interest + taxes + insurance × months)<br>
+          − Disposition Costs (~8–10% of ARV)<br>
+          − Financing Costs (points + rate × months)<br>
+          <span style="color:rgba(200,200,192,0.12);">─────────────────────────────</span><br>
+          <span class="f-eq">= Net Profit</span><br><br>
+          Net Profit ÷ Total Cash Out of Pocket <span class="f-eq">= ROI</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Read <em>The Book on Estimating Rehab Costs</em> by J Scott - essential given your construction background</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Download the BiggerPockets Deal Analyzer (free) and run 20–50 practice deals on real listings in your market</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Learn to read a HUD-1 / ALTA Settlement Statement - it shows every real cost at closing</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Walk through at least 5 distressed properties with a contractor before buying one - calibrate your repair eye</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build your own Scope of Work template so you can estimate a property quickly and consistently</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Never use a wholesaler's ARV as your own - always verify independently. Every single time.</div></label>
+      </div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Read <em>The Book on Estimating Rehab Costs</em> by J Scott - essential given your construction background</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Download the BiggerPockets Deal Analyzer (free) and run 20–50 practice deals on real listings in your market</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Learn to read a HUD-1 / ALTA Settlement Statement - it shows every real cost at closing</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Walk through at least 5 distressed properties with a contractor before buying one - calibrate your repair eye</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build your own Scope of Work template so you can estimate a property quickly and consistently</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Never use a wholesaler's ARV as your own - always verify independently. Every single time.</div></label>
-  </div>
-</div>
-```
-
-  </div>
-
   <!-- ═══════════════════════════════════════ PHASE 4 -->
-
   <div class="phase p4" id="phase4">
     <div class="phase-header" onclick="togglePhase('phase4')">
       <div class="phase-num">PHASE 04</div>
@@ -598,41 +583,37 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Now you're ready. You have POF, you know your MAO formula, and you can run a deal in under an hour. When a wholesaler sends you something, you're dangerous. Without Phases 2 and 3 done first, you're just a tourist.</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">MLS</div><div class="term-def">Multiple Listing Service. Database of publicly listed properties. Most profitable flip deals are <strong>not</strong> here - or if they are, they're gone within hours. Good for comping practice though.</div></div>
-    <div class="term"><div class="term-word">Off-Market Deal</div><div class="term-def">A property not publicly listed. Owner hasn't listed it yet or doesn't want to. Best margins live here.</div></div>
-    <div class="term"><div class="term-word">Wholesaler</div><div class="term-def">An investor who finds distressed properties, puts them under contract, then sells that contract to you for an assignment fee. They do the hunting; you pay a premium. Good wholesalers become your most important deal source.</div></div>
-    <div class="term"><div class="term-word">Assignment Fee</div><div class="term-def">What the wholesaler charges you to hand over their contract. Typically $5K–$20K. Comes directly out of your profit - always factor it into your MAO.</div></div>
-    <div class="term"><div class="term-word">Motivated Seller</div><div class="term-def">An owner who needs to sell more than they need top dollar. The emotional driver behind every good deal. Situations: probate, divorce, pre-foreclosure, tired landlord, inherited property.</div></div>
-    <div class="term"><div class="term-word">Pre-Foreclosure</div><div class="term-def">Owner is behind on payments but hasn't lost the home yet. Public record. Consistently motivated sellers.</div></div>
-    <div class="term"><div class="term-word">Probate</div><div class="term-def">Property inherited after a death, sold by heirs who just want it liquidated. Frequently underpriced. Great consistent lead source.</div></div>
-    <div class="term"><div class="term-word">Absentee Owner</div><div class="term-def">Owns the property but doesn't live there. Often a tired landlord with high motivation to sell at a discount.</div></div>
-    <div class="term"><div class="term-word">PropStream / BatchLeads</div><div class="term-def">Software tools (~$100–150/mo) that pull distressed property lists, owner contact info, equity data, and foreclosure status. Essential for sourcing your own leads.</div></div>
-    <div class="term"><div class="term-word">Skip Tracing</div><div class="term-def">Finding contact info for a property owner using their name and address. Used to reach owners of off-market properties directly.</div></div>
-    <div class="term"><div class="term-word">Driving for Dollars</div><div class="term-def">Driving neighborhoods looking for distressed homes: overgrown yards, boarded windows, stacked mail. Old school but still works.</div></div>
-    <div class="term"><div class="term-word">Investor-Friendly Agent</div><div class="term-def">An agent who understands investor math, will write low offers without hesitation, and brings you deals before they hit the MLS. Critical to have one in your market.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">MLS</div><div class="term-def">Multiple Listing Service. Database of publicly listed properties. Most profitable flip deals are <strong>not</strong> here - or if they are, they're gone within hours. Good for comping practice though.</div></div>
+        <div class="term"><div class="term-word">Off-Market Deal</div><div class="term-def">A property not publicly listed. Owner hasn't listed it yet or doesn't want to. Best margins live here.</div></div>
+        <div class="term"><div class="term-word">Wholesaler</div><div class="term-def">An investor who finds distressed properties, puts them under contract, then sells that contract to you for an assignment fee. They do the hunting; you pay a premium. Good wholesalers become your most important deal source.</div></div>
+        <div class="term"><div class="term-word">Assignment Fee</div><div class="term-def">What the wholesaler charges you to hand over their contract. Typically $5K–$20K. Comes directly out of your profit - always factor it into your MAO.</div></div>
+        <div class="term"><div class="term-word">Motivated Seller</div><div class="term-def">An owner who needs to sell more than they need top dollar. The emotional driver behind every good deal. Situations: probate, divorce, pre-foreclosure, tired landlord, inherited property.</div></div>
+        <div class="term"><div class="term-word">Pre-Foreclosure</div><div class="term-def">Owner is behind on payments but hasn't lost the home yet. Public record. Consistently motivated sellers.</div></div>
+        <div class="term"><div class="term-word">Probate</div><div class="term-def">Property inherited after a death, sold by heirs who just want it liquidated. Frequently underpriced. Great consistent lead source.</div></div>
+        <div class="term"><div class="term-word">Absentee Owner</div><div class="term-def">Owns the property but doesn't live there. Often a tired landlord with high motivation to sell at a discount.</div></div>
+        <div class="term"><div class="term-word">PropStream / BatchLeads</div><div class="term-def">Software tools (~$100–150/mo) that pull distressed property lists, owner contact info, equity data, and foreclosure status. Essential for sourcing your own leads.</div></div>
+        <div class="term"><div class="term-word">Skip Tracing</div><div class="term-def">Finding contact info for a property owner using their name and address. Used to reach owners of off-market properties directly.</div></div>
+        <div class="term"><div class="term-word">Driving for Dollars</div><div class="term-def">Driving neighborhoods looking for distressed homes: overgrown yards, boarded windows, stacked mail. Old school but still works.</div></div>
+        <div class="term"><div class="term-word">Investor-Friendly Agent</div><div class="term-def">An agent who understands investor math, will write low offers without hesitation, and brings you deals before they hit the MLS. Critical to have one in your market.</div></div>
+      </div>
 
-  <div class="callout"><strong>The Hard Truth About Wholesalers:</strong> Many overprice their deals. Run your own numbers every time. A wholesaler deal must still pass the 70% rule <em>after</em> the assignment fee is added to your cost. Close fast, pay on time, and the best ones will feed you their best deals first.</div>
+      <div class="callout"><strong>The Hard Truth About Wholesalers:</strong> Many overprice their deals. Run your own numbers every time. A wholesaler deal must still pass the 70% rule <em>after</em> the assignment fee is added to your cost. Close fast, pay on time, and the best ones will feed you their best deals first.</div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Find and vet 3–5 active wholesalers in your target market - attend REIA, join local Facebook investor groups, search "we buy houses [your city]"</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get on at least 3 wholesaler email lists immediately - study deals even before you're ready to buy. Train your eye.</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Subscribe to PropStream or BatchLeads once you're ready to source your own leads</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build a relationship with one investor-friendly agent in your target market</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Set up MLS alerts for under-market properties in your target zip codes</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Commit to analyzing 50–100 deals before you buy one - this is a reps game. Volume builds your eye.</div></label>
-  </div>
-</div>
-```
-
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Find and vet 3–5 active wholesalers in your target market - attend REIA, join local Facebook investor groups, search "we buy houses [your city]"</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get on at least 3 wholesaler email lists immediately - study deals even before you're ready to buy. Train your eye.</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Subscribe to PropStream or BatchLeads once you're ready to source your own leads</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build a relationship with one investor-friendly agent in your target market</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Set up MLS alerts for under-market properties in your target zip codes</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Commit to analyzing 50–100 deals before you buy one - this is a reps game. Volume builds your eye.</div></label>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ PHASE 5 -->
-
   <div class="phase p5" id="phase5">
     <div class="phase-header" onclick="togglePhase('phase5')">
       <div class="phase-num">PHASE 05</div>
@@ -643,40 +624,36 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Where most beginners lose control of their profit. Your construction background is a serious edge here - use it. Your job is project manager, not laborer (mostly).</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">Scope of Work (SOW)</div><div class="term-def">Your written, line-item bible for the entire rehab. Every task, every material, every cost. This is your contract protection and budget control. Never hire a contractor without a detailed, signed SOW.</div></div>
-    <div class="term"><div class="term-word">General Contractor (GC)</div><div class="term-def">Oversees the project, manages subs, pulls permits. You pay them 10–20% overhead on top of labor and materials. Your construction background may let you act as your own GC on Deal 1 - a significant cost savings.</div></div>
-    <div class="term"><div class="term-word">Lien Waiver</div><div class="term-def">Document a contractor signs confirming they've been paid and waiving their right to file a lien. Get one signed before every single payment. Non-negotiable.</div></div>
-    <div class="term"><div class="term-word">Mechanic's Lien</div><div class="term-def">A contractor's legal claim against your property for unpaid work. It clouds title and can kill your sale entirely. Lien waivers are your shield.</div></div>
-    <div class="term"><div class="term-word">Draw Request</div><div class="term-def">Your formal request to your HML to release a rehab disbursement after completing a defined work milestone.</div></div>
-    <div class="term"><div class="term-word">Punch List</div><div class="term-def">Final list of small incomplete items at the end of a project. Do not release final payment until every item is resolved.</div></div>
-    <div class="term"><div class="term-word">Cosmetic vs. Gut Rehab</div><div class="term-def"><strong>Cosmetic:</strong> Paint, flooring, fixtures, kitchen/bath updates. Fast, predictable. Your first deal should be this. <strong>Full gut:</strong> Structural, plumbing, electrical, HVAC to the studs. Much higher risk. Not for Deal 1.</div></div>
-    <div class="term"><div class="term-word">Over-Improving</div><div class="term-def">Spending more on finishes than the market will pay back. Granite countertops in a $130K neighborhood don't return granite-level value. Match the neighborhood standard - don't exceed it.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">Scope of Work (SOW)</div><div class="term-def">Your written, line-item bible for the entire rehab. Every task, every material, every cost. This is your contract protection and budget control. Never hire a contractor without a detailed, signed SOW.</div></div>
+        <div class="term"><div class="term-word">General Contractor (GC)</div><div class="term-def">Oversees the project, manages subs, pulls permits. You pay them 10–20% overhead on top of labor and materials. Your construction background may let you act as your own GC on Deal 1 - a significant cost savings.</div></div>
+        <div class="term"><div class="term-word">Lien Waiver</div><div class="term-def">Document a contractor signs confirming they've been paid and waiving their right to file a lien. Get one signed before every single payment. Non-negotiable.</div></div>
+        <div class="term"><div class="term-word">Mechanic's Lien</div><div class="term-def">A contractor's legal claim against your property for unpaid work. It clouds title and can kill your sale entirely. Lien waivers are your shield.</div></div>
+        <div class="term"><div class="term-word">Draw Request</div><div class="term-def">Your formal request to your HML to release a rehab disbursement after completing a defined work milestone.</div></div>
+        <div class="term"><div class="term-word">Punch List</div><div class="term-def">Final list of small incomplete items at the end of a project. Do not release final payment until every item is resolved.</div></div>
+        <div class="term"><div class="term-word">Cosmetic vs. Gut Rehab</div><div class="term-def"><strong>Cosmetic:</strong> Paint, flooring, fixtures, kitchen/bath updates. Fast, predictable. Your first deal should be this. <strong>Full gut:</strong> Structural, plumbing, electrical, HVAC to the studs. Much higher risk. Not for Deal 1.</div></div>
+        <div class="term"><div class="term-word">Over-Improving</div><div class="term-def">Spending more on finishes than the market will pay back. Granite countertops in a $130K neighborhood don't return granite-level value. Match the neighborhood standard - don't exceed it.</div></div>
+      </div>
 
-  <div class="callout"><strong>Contractor Red Flags - Walk away if you see:</strong> Wants 50%+ upfront · No license or insurance · No written contract · Can start immediately with no other work · Won't provide references from recent jobs.</div>
+      <div class="callout"><strong>Contractor Red Flags - Walk away if you see:</strong> Wants 50%+ upfront · No license or insurance · No written contract · Can start immediately with no other work · Won't provide references from recent jobs.</div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build your full Scope of Work before you close on the property - know the entire scope before you own it</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Always get 3 bids on every project - especially your first</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Never pay more than 10–15% upfront to any contractor - tie all payments to completed milestones</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get lien waivers signed at every payment, every time. No exceptions.</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Verify contractor license and insurance before hiring - call the insurance company directly to confirm active coverage</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Visit the job site every 2–3 days minimum - your presence prevents theft, shortcuts, and delays</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Identify which trades you'll handle yourself (electrical is your edge) and pull proper permits for that work</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Hold 10–15% contingency on total rehab budget - surprises are not optional, they're inevitable</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Research standard finishes for your target neighborhood - match buyer expectations, nothing more</div></label>
-  </div>
-</div>
-```
-
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Build your full Scope of Work before you close on the property - know the entire scope before you own it</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Always get 3 bids on every project - especially your first</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Never pay more than 10–15% upfront to any contractor - tie all payments to completed milestones</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Get lien waivers signed at every payment, every time. No exceptions.</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Verify contractor license and insurance before hiring - call the insurance company directly to confirm active coverage</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Visit the job site every 2–3 days minimum - your presence prevents theft, shortcuts, and delays</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Identify which trades you'll handle yourself (electrical is your edge) and pull proper permits for that work</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Hold 10–15% contingency on total rehab budget - surprises are not optional, they're inevitable</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Research standard finishes for your target neighborhood - match buyer expectations, nothing more</div></label>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ PHASE 6 -->
-
   <div class="phase p6" id="phase6">
     <div class="phase-header" onclick="togglePhase('phase6')">
       <div class="phase-num">PHASE 06</div>
@@ -687,36 +664,32 @@ letter-spacing: 0.06em;
     <div class="phase-body">
       <div class="why-note">Get out at the right price, the right way. Understand this before you buy - but study it after you've absorbed everything else.</div>
 
-```
-  <div class="section">
-    <div class="section-label">Terminology to Know</div>
-    <div class="term"><div class="term-word">Disposition</div><div class="term-def">The process of selling the finished property. Your exit in fix and flip is almost always a retail sale to an end buyer.</div></div>
-    <div class="term"><div class="term-word">List Price Strategy</div><div class="term-def">Pricing slightly below the top comp creates urgency and multiple offers. Pricing at the ceiling means slower sales and mounting holding costs.</div></div>
-    <div class="term"><div class="term-word">Seller Concessions</div><div class="term-def">Closing cost credits you offer the buyer. Buyers routinely ask for 1–3%. Budget for this in your original underwrite - not as a surprise later.</div></div>
-    <div class="term"><div class="term-word">Appraisal Contingency</div><div class="term-def">Buyer's lender appraises the property. If it comes in below contract price, you reduce price or the deal dies. Your comps must support the ARV - this is why accurate comping matters from Day 1.</div></div>
-    <div class="term"><div class="term-word">Inspection Contingency</div><div class="term-def">Buyer hires an inspector who may request repairs or credits. On a properly renovated flip this should be minor. Do not cut corners - they will be found.</div></div>
-    <div class="term"><div class="term-word">Cash Buyer</div><div class="term-def">No financing contingency, no appraisal, closes in 7–14 days. May offer slightly less - but the certainty often makes it worth it, especially on your first deal.</div></div>
-    <div class="term"><div class="term-word">Plan B Exit</div><div class="term-def">Before you buy any property, ask: if I can't sell at target price, could I rent it? What would it cash flow? Know your fallback before you close.</div></div>
-    <div class="term"><div class="term-word">Net Proceeds</div><div class="term-def">What you actually walk away with after paying off the hard money loan, agent commissions, closing costs, and concessions. This is your real profit number.</div></div>
-  </div>
+      <div class="section">
+        <div class="section-label">Terminology to Know</div>
+        <div class="term"><div class="term-word">Disposition</div><div class="term-def">The process of selling the finished property. Your exit in fix and flip is almost always a retail sale to an end buyer.</div></div>
+        <div class="term"><div class="term-word">List Price Strategy</div><div class="term-def">Pricing slightly below the top comp creates urgency and multiple offers. Pricing at the ceiling means slower sales and mounting holding costs.</div></div>
+        <div class="term"><div class="term-word">Seller Concessions</div><div class="term-def">Closing cost credits you offer the buyer. Buyers routinely ask for 1–3%. Budget for this in your original underwrite - not as a surprise later.</div></div>
+        <div class="term"><div class="term-word">Appraisal Contingency</div><div class="term-def">Buyer's lender appraises the property. If it comes in below contract price, you reduce price or the deal dies. Your comps must support the ARV - this is why accurate comping matters from Day 1.</div></div>
+        <div class="term"><div class="term-word">Inspection Contingency</div><div class="term-def">Buyer hires an inspector who may request repairs or credits. On a properly renovated flip this should be minor. Do not cut corners - they will be found.</div></div>
+        <div class="term"><div class="term-word">Cash Buyer</div><div class="term-def">No financing contingency, no appraisal, closes in 7–14 days. May offer slightly less - but the certainty often makes it worth it, especially on your first deal.</div></div>
+        <div class="term"><div class="term-word">Plan B Exit</div><div class="term-def">Before you buy any property, ask: if I can't sell at target price, could I rent it? What would it cash flow? Know your fallback before you close.</div></div>
+        <div class="term"><div class="term-word">Net Proceeds</div><div class="term-def">What you actually walk away with after paying off the hard money loan, agent commissions, closing costs, and concessions. This is your real profit number.</div></div>
+      </div>
 
-  <div class="section">
-    <div class="section-label">Must-Do Checklist</div>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Engage your investor-friendly agent before the rehab is finished - list immediately upon completion, not weeks later</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Price based on comps, not your cost basis - the market doesn't care what you paid or spent</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Budget 8–10% of ARV for total sell-side costs before you ever make an offer</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Do a pre-listing walkthrough and fix anything an inspector would flag</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Stage the property and hire a professional photographer - no exceptions</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">If it hasn't sold in 2–3 weeks, reduce the price. Holding costs make stubbornness very expensive.</div></label>
-    <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Always know your Plan B exit before you close on the purchase</div></label>
-  </div>
-</div>
-```
-
+      <div class="section">
+        <div class="section-label">Must-Do Checklist</div>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Engage your investor-friendly agent before the rehab is finished - list immediately upon completion, not weeks later</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Price based on comps, not your cost basis - the market doesn't care what you paid or spent</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Budget 8–10% of ARV for total sell-side costs before you ever make an offer</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Do a pre-listing walkthrough and fix anything an inspector would flag</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Stage the property and hire a professional photographer - no exceptions</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">If it hasn't sold in 2–3 weeks, reduce the price. Holding costs make stubbornness very expensive.</div></label>
+        <label class="check-item" onclick="toggle(this)"><input type="checkbox"><div class="check-box"><div class="check-box-tick">✓</div></div><div class="check-text">Always know your Plan B exit before you close on the purchase</div></label>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ NUANCES -->
-
   <div class="phase nuances-phase" id="phase7">
     <div class="phase-header" onclick="togglePhase('phase7')">
       <div class="phase-num">BONUS</div>
@@ -741,7 +714,6 @@ letter-spacing: 0.06em;
   </div>
 
   <!-- ═══════════════════════════════════════ FORMULAS -->
-
   <div class="phase formulas-phase" id="phase8">
     <div class="phase-header" onclick="togglePhase('phase8')">
       <div class="phase-num">REF</div>
@@ -766,7 +738,6 @@ letter-spacing: 0.06em;
   </div>
 
   <!-- ═══════════════════════════════════════ RESOURCES -->
-
   <div class="phase resources-phase" id="phase9">
     <div class="phase-header" onclick="togglePhase('phase9')">
       <div class="phase-num">REF</div>
@@ -853,6 +824,5 @@ letter-spacing: 0.06em;
   loadState();
   updateProgress();
 </script>
-
 </body>
 </html>
